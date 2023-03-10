@@ -20,13 +20,23 @@ app.use(
 // app.use(fileUpload());
 
 app.use(cookieParser());
-app.use(
-  cors({
-    origin: 'https://vhandleuss.netlify.app/',
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-  })
-);
+// app.use(
+//   cors({
+//     origin: 'https://vhandleuss.netlify.app/',
+//     credentials: true,
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//   })
+// );
+
+const allowCrossDomain = (req, res, next) => {
+  res.header(`Access-Control-Allow-Origin`, `https://vhandleuss.netlify.app/`);
+  res.header(`Access-Control-Allow-Methods`, `GET,PUT,POST,DELETE`);
+  res.header(`Access-Control-Allow-Headers`, `Content-Type`);
+  next();
+};
+
+app.use(allowCrossDomain);
+
 
 
 
