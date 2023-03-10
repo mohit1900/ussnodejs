@@ -18,6 +18,7 @@ app.use(
   })
 );
 // app.use(fileUpload());
+
 app.use(cookieParser());
 app.use(
   cors({
