@@ -5,12 +5,14 @@ import {
   getDecryptedImage,
   uploadImage,
 } from "../controllers/imageController.js";
+
 import {
   addNote,
   deleteNote,
   extractedNotes,
   getMyNotes,
 } from "../controllers/notesController.js";
+
 import {
   // addToPlaylist,
   changePassword,
