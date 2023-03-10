@@ -17,7 +17,6 @@ app.use(
     extended: true,
   })
 );
-// app.use(fileUpload());
 
 app.use(cookieParser());
 app.use(
