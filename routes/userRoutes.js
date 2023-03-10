@@ -63,7 +63,7 @@ router.route("/my/images").get(isAuthenticated, isVerified, getAllImages);
 router
   .route("/image/decrypt")
   .post(isAuthenticated, isVerified, getDecryptedImage);
-router.route("/image/upload").post(isAuthenticated, isVerified, uploadImage);
+router.route("/image/upload").post(isAuthenticated, isVerified, singleUpload, uploadImage);
 router.route("/image/delete").delete(isAuthenticated, isVerified, deleteImage);
 
 export default router;
