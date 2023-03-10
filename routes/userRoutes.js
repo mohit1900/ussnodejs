@@ -1,5 +1,11 @@
 import express from "express";
 import {
+  deleteImage,
+  getAllImages,
+  getDecryptedImage,
+  uploadImage,
+} from "../controllers/imageController.js";
+import {
   addNote,
   deleteNote,
   extractedNotes,
