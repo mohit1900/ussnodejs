@@ -24,7 +24,6 @@ app.use(
   cors({
     origin: 'https://vhandleuss.netlify.app',
     credentials: true,
-//     origin: '*',
     optionsSuccessStatus: 200,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
