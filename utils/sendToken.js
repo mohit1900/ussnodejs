@@ -9,6 +9,7 @@ export const sendToken = (res, user, message, statusCode = 200) => {
     domain: '.netlify.app'
   };
 
+  
   res.status(statusCode).cookie("token", token, options).json({
     success: true,
     message,
