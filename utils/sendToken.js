@@ -6,6 +6,7 @@ export const sendToken = (res, user, message, statusCode = 200) => {
     httpOnly: true,
     secure: true,
     sameSite: "none",
+    path: "/",
 //     domain: '.netlify.app'
   };
 
