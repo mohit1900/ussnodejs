@@ -21,13 +21,11 @@ app.use(
 app.use(cookieParser());
 app.use(
   cors({
-    origin: 'https://vhandleuss.netlify.app',
+    origin: "https://vhandleuss.netlify.app",
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
-
-
 
 import user from "./routes/userRoutes.js";
 import admin from "./routes/adminRoutes.js";

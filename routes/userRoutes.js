@@ -1,5 +1,11 @@
 import express from "express";
 import {
+  deleteImage,
+  getAllImages,
+  getDecryptedImage,
+  uploadImage,
+} from "../controllers/imageController.js";
+import {
   addNote,
   deleteNote,
   extractedNotes,
@@ -49,5 +55,15 @@ router.route("/getmynotes").get(isAuthenticated, isVerified, getMyNotes);
 router
   .route("/getextractednotes")
   .post(isAuthenticated, isVerified, extractedNotes);
+
+//images
+router.route("/my/images").get(isAuthenticated, isVerified, getAllImages);
+router
+  .route("/image/decrypt")
+  .post(isAuthenticated, isVerified, getDecryptedImage);
+router
+  .route("/image/upload")
+  .post(isAuthenticated, isVerified, singleUpload, uploadImage);
+router.route("/image/delete").delete(isAuthenticated, isVerified, deleteImage);
 
 export default router;
