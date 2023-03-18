@@ -19,6 +19,7 @@ app.use(
 );
 
 app.use(cookieParser());
+
 app.use(
   cors({
     origin: "https://vhandleuss.netlify.app",
