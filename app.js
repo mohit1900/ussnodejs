@@ -4,6 +4,7 @@ import ErrorMiddleware from "./middleware/Error.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
+
 config({
   path: "./config/config.env",
 });
